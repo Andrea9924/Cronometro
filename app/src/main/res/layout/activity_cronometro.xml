@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_google_signin_btn_text_dark_default"
+    tools:context=".cronometro">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="406dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="sans-serif"
+        android:shadowColor="#8C2828"
+        android:text="Cronometro"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="2dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="60dp">
+
+        <Chronometer
+            android:id="@+id/cronometro1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:textColor="#0E0E0E"
+            android:textSize="50sp"
+
+            ></Chronometer>
+
+        <ProgressBar
+            android:id="@+id/circle"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="270dp"
+            android:layout_height="370dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/circle_2"
+            android:indeterminate="false"
+            android:max="100"
+            android:progres="100"
+            android:progressDrawable="@drawable/circle_1"
+            android:rotation="-90"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="180" />
+
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/iniciar1"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="71dp"
+        android:layout_height="64dp"
+        android:layout_below="@id/circle"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@drawable/iniciar"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="565dp"
+        android:onClick="starChronometer"/>
+
+    <ImageButton
+        android:id="@+id/pausa1"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="69dp"
+        android:layout_height="61dp"
+        android:layout_below="@id/circle"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@drawable/pause"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="565dp"
+        android:onClick="pausaChronometer"
+        />
+
+    <ImageButton
+        android:id="@+id/reiniciar1"
+        android:layout_width="78dp"
+        android:layout_height="61dp"
+        app:srcCompat="@drawable/reiniciar"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="565dp"
+
+        />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/circle"
+        android:layout_alignParentStart="true"
+        android:onClick="stopChronometer"
+        app:srcCompat="@android:drawable/ic_lock_power_off"
+        tools:layout_editor_absoluteX="173dp"
+        tools:layout_editor_absoluteY="644dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
